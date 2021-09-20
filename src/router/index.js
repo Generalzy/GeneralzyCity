@@ -1,6 +1,10 @@
+/* jshint esversion: 6 */
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import ActualCourse from "../views/ActualCourse";
+import FreeCourse from "../views/FreeCourse";
+import LightCourse from "../views/LightCourse";
 
 Vue.use(VueRouter)
 
@@ -10,14 +14,21 @@ const routes = [
     name: 'Home',
     component: Home
   },
-  {
-    path: '/about',
-    name: 'About',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
-  }
+    {
+    path: '/light-course',
+    name: 'LightCourse',
+    component: LightCourse
+  },
+    {
+    path: '/actual-course',
+    name: 'ActualCourse',
+    component: ActualCourse
+  },
+    {
+    path: '/free-course',
+    name: 'FreeCourse',
+    component: FreeCourse
+  },
 ]
 
 const router = new VueRouter({
