@@ -30,6 +30,13 @@ Vue.use(ElementUI);
 import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
+
+// vue-video播放器
+require('video.js/dist/video-js.css');
+require('vue-video-player/src/custom-theme.css');
+import VideoPlayer from 'vue-video-player'
+Vue.use(VideoPlayer);
+
 new Vue({
   router,
   store,
